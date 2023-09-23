@@ -83,10 +83,10 @@ flex-wrap: wrap;
 display: inline-flex;
 height: 40px;
 width: 200px;
-border: 2px solid #BFC0C0;
+border: 2px solid #ffffff;
 margin: 20px 20px 20px 20px;
 margin-bottom: -70px;
-color: #BFC0C0;
+color: #ffffff;
 /* text-transform: uppercase; */
 text-decoration: none;
 font-size: .9em;
@@ -117,7 +117,7 @@ transition: all .35s ease-Out;
 width: 100%;
 height: 100%;
 left: -200px;
-background: #BFC0C0;
+background: #ffffff;
 position: absolute;
 transition: all .35s ease-Out;
 bottom: 0;
@@ -128,7 +128,7 @@ left: 0;
 }
 
 #button-2:hover a {
-color: #2D3142;
+color: #000000;
 }
 
 .sn{

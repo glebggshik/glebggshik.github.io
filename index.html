@@ -2,422 +2,48 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/off-styles.css">
+    <link rel="stylesheet" href="css/null.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Интерактивный Южноуральск</title>
-    <style>
-    /* Указываем box sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Убираем внешние отступы */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Упрощаем работу с изображениями */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
-}
-
-/* Наследуем шрифты для инпутов и кнопок */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-    body{
-    background-color: #e5e5e5;
-}
-.menu{
-    width: auto;
-    height: 60px;
-    width: auto;
-    background-color: rgb(128, 128, 128); 
-    margin-top: 16px;
-    display: flex;
-    justify-content: space-between;
-}
-.logo-1{
-    width: 60px;
-    height: 78px;
-    
-    
-    display: block;
-}
-.logo-1 img{
-  width: 60px;
-  height: 78px;
-  margin-left: 20px;
-  margin-top: -7px;
-  margin-right: 50px;
-  display: block;
-}
-.menu h1{
-  margin-left: 40px;
-  margin-top: 4px;
-  white-space: nowrap;
-}
-.spisok{
-  margin-right: 40px;
-  
-  width: auto;
-  height: 60px; 
-}
-nav select {
-  display: none;
-  
-}
-
-.button {
-    height:44px;
-    background-color:#e5e4e4;
-    cursor:pointer;  
-    border-radius: 5px;
-    margin-left: 20px;
-    margin-right: 5px; 
-    margin-top: 8px;
-    margin-bottom: 8px; 
-}
-.button p{
-    text-align: center;
-}
-
-.main-title{
-    text-align: center;
-    margin-top: 30px;
-}
-.container{
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 15px;
-    background-color: white;
-    padding: 15px 15px 15px 15px;
-    border-radius: 5px;
-}
-.container img{
-  width: 100%;
-}
-.left-menu{
-  display: flex;
-  flex-basis: 45%;
-}
-.adaptivny-slayder {
-  position: relative;
-  max-width: 680px;
-  margin: 50px auto;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
-}
-
-.adaptivny-slayder input[name="kadoves"] {
-  display: none;
-}
-
-.kadoves {
-  position: absolute;
-  left: 0;
-  bottom: -40px;
-  text-align: center;
-  width: 100%;
-}
-
-.kadoves label {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  cursor: pointer;
-  margin: 0 3px;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
-  border-radius: 50%;
-  border: 5px solid #2f363c;
-  background-color: #738290;
-}
-
-#slaid1:checked~.kadoves label[for="slaid1"] {
-  background-color: white;
-}
-
-#slaid2:checked~.kadoves label[for="slaid2"] {
-  background-color: white;
-}
-
-#slaid3:checked~.kadoves label[for="slaid3"] {
-  background-color: white;
-}
-
-.adaptivny-slayder-lasekun {
-  overflow: hidden;
-   
-}
-
-.abusteku-deagulus {
-  display: flex;
-  width: 100%;
-  transition: all 0.5s;
-}
-
-.abusteku-deagulus img {
-  width: 100%;
-  flex-shrink:0;
-}
-
-#slaid1:checked~adaptivny-slayder-lasekun abusteku-deagulus {
-  transform: translate(0);
-}
-
-#slaid2:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
-  transform: translateX(-100%);
-}
-
-#slaid3:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
-  transform: translateX(-200%);
-}
-select{
-  height: 48px;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  width: 200px;
-  margin-right: 20px;
-}
-
-@media (max-width: 755px) {
-  nav input    { display: none; }
-  nav select { display: inline-block; }
-  h1 {font-size: 24px;
-      
-  }
-  
-  p{
-    font-size: 14px;
-  }
-}
-@media (max-width: 572px) {
-  nav input    { display: none; }
-  nav select { display: inline-block; }
-  h1 {font-size: 20px;
-  }
-  .menu h1{
-    
-    margin-top: 10px;
-    white-space: nowrap;
-  }
-  p{
-    font-size: 12px;
-  }
-  .container{
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
-@media (max-width: 537px) {
-  nav input    { display: none; }
-  nav select { display: inline-block; }
-  
-  select{
-    width: 100px ;
-  }
-  .container{
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
-@media (max-width: 427px) {
-  nav input    { display: none; }
-  nav select { display: inline-block; }
-  
-  select{
-    width: 67px ;
-  }
-  h1{
-    font-size: 16px;
-    padding-top: 8px;
-  }
-  p{
-    font-size: 12px;
-  }
-  .container{
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
-  @media (max-width: 385px) {
-    nav input    { display: none; }
-    nav select { display: inline-block; }
-    
-    select{
-      width: 67px ;
-      margin-right: 20px
-    }
-    h1{
-      font-size: 16px;
-      padding-top: 8px;
-    }
-    p{
-      font-size: 12px;
-    }
-    .container{
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-    .logo-1 img{
-      margin-left: 2px;
-    }
-    .menu h1{
-      margin-right: 20px
-    }
-}
-@media (max-width: 385px) {
-  nav input    { display: none; }
-  nav select { display: inline-block; }
-  .menu h1{
-    margin-left: 10px;
-    margin-right:10px;
-  }
-
-}
-
-    </style>
+    <title>Мое портфолио</title>
 </head>
 <body>
-    <div class="menu">
-        <div class="left-menu">    
-            <div class="logo-1">
-                <img src="img/gerb.png">
-            </div>
-            <h1>Тур по Южноуральску</h1>
+    <header class="site-header">
+        <div class="site-identity">
+            <img src="img/my_icon.jpg" >
         </div>
-        <!-- <div class="spisok"> -->
-            <nav> 
-
-                <input type="button" value="Главная" class="button">
-                    <a href="#">
-                        
-                    </a>
-                </input> 
-                <input type="button" value="Экскурсия по Южноуральску" class="button">
-                    <a href="#">
-                        
-                    </a>
-                </input> 
-                
-                <select> 
-                  <option value="" selected="selected">Меню</option> 
-                  
-                  <option value="/">Home</option> 
-                  <option value="/collections/all">Books</option> 
-                  
-                </select> 
-              
-              </nav>
-        <!-- </div> -->
-    </div>
-    
-    <div class="container">
-        
-        <div class="adaptivny-slayder">
-            <input type="radio" name="kadoves" id="slaid1" checked>
-            <input type="radio" name="kadoves" id="slaid2">
-            <input type="radio" name="kadoves" id="slaid3">
-             
-            <div class="kadoves">
-            <label for="slaid1"></label>
-            <label for="slaid2"></label>
-            <label for="slaid3"></label>
+        <nav class="site-navigation">
+            <ul class="nav">
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Практика</a></li>
+                <li><a href="#">Обо мне</a></li>
+                <li><a href="#">Контакты</a></li>
+                <a class="change" href="#"></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper"> 
+        <div class="main">
+            <h1>Хазиев Глеб</h1><br>
+            <h2>Электрослесарь по ремонту электрооборудования электростанций</h2>
+            <p align="justify">Моя задача состоит в том, чтобы обеспечивать надежное и безопасное функционирование электрооборудования и электрических систем,
+            а также профессиональный монтаж, обслуживание и ремонт, чтобы гарантировать непрерывность работы критически важных инфраструктур 
+            и комфорт повседневной жизни.</p>
+            <div id="container"> 
+                <div class="button" id="button-2">
+                    <div id="slide"></div>
+                    <a href="#">Мои работы</a>
+                </div>
+            </div> 
+            <div class="sn">
+                <a href="#"><img src="img/free-icon-vkontakte-4494490.png"></a>
+                <a href="#"><img src="img/free-icon-telegram-4701496.png"></a>
+                <a href="#"><img src="img/free-icon-github-3291695.png"></a>
             </div>
-             
-            <div class="adaptivny-slayder-lasekun">
-            <div class="abusteku-deagulus">
-            <img src="img/it-cube.jpg"/>
-            <img src="img/it-cube-2.jpg"/>
-            <img src="img/it-cube-3.jpg"/>
-            </div>
-            </div>
-          </div>
-            <h1>Центр цифрового образования детей «IT-куб» г. Южноуральска</h1> 
-<p>«IT-куб» – инновационная площадка дополнительного образования детей, направленная на развитие знаний и навыков в области программирования. Целью детских центров цифрового творчества является массовое обучение детей базовым навыкам программирования за короткое время.
-В 2019 году город Южноуральск успешно прошел конкурсный отбор среди городов Челябинской области, претендовавших на право предоставления субсидии из федерального бюджета на создание центра цифрового образования детей «IT-куб». 
-9 сентября 2020 года центр цифрового образования детей г. Южноуральска распахнул свои двери для 402 ребят в возрасте от 6 до 17 лет на 7 образовательных направлений на бюджетной основе: «Программирование на Python», «Мобильная разработка», «Разработка приложений виртуальной и дополненной реальности», «Системное администрирование», «Основы программирования на JAVA», «Программирование роботов». Седьмым дополнительным образовательным направлением стала «Шахматная гостиная».
-На сегодняшний день в «IT-кубе» уже учится 562 ребенка.
-</p><br><br>
-<h2>Воспитанники «IT-куба» постоянно участвуют в различных конкурсах, фестивалях, соревнованиях различного уровня, как в очном, так заочном формате.</h2>
-<p>Обучающиеся образовательного направления «Программирование роботов» участвовали в соревнованиях IT-фест, «Транспорт будущего», заняли 1 место в региональном этапе олимпиады школьников «Робофест – 2022». 
-Обучающиеся Центра на языках программирования Python и  JAVA стали призерами в Региональном научно-техническом хакатоне по спортивному программированию на языках Python и JAVA в городе Арзамас. 
-Воспитанники образовательного направления виртуальной и дополненной реальности неоднократно становились победителями и призерами в   межрегиональных конкурсах и хакатонах. 
-Наставники образовательного направления «Системное администрирование» стали инициаторами проведения первого хакатона по системному администрированию среди обучающихся центра. В 2022-м году хакатон приобрел статус регионального. 
-Воспитанники образовательного направления «Шахматная гостиная» активно участвуют в шахматных соревнованиях различного уровня. 
-</p> <br><br>
-
-
-
-<ul><h2>Интересные факты об учреждении.</h2>
-     <li>Как куб содержит 6 граней, так и «IT-куб» г.Южноуральска обучает детей по 6 образовательным направлениям: «Программирование на Python», «Мобильная разработка», «Разработка VR/AP-приложений», «Системное администрирование», «Основы программирования на JAVA», «Программирование роботов»;</li>
-     <li>В Центре цифрового образования проходит огромное количество мастер-классов, квизов, квестов не только для обучающихся «IT-куба», но и детей дошкольных и школьных учреждений города;</li>
-     <li>«IT-кубе» стал инициатором проведения неформального разговорного клуба «SPEAKлуб», главными гостями которого становятся профессионально состоявшиеся личности; </li>
-     <li>В 2022-м году «IT-куб» стал площадкой проведения первого регионального фестиваля «Лего-крошка», городского конкурса «Правовой марафон», областного шахматного турнира, открытого Первенства по начальному авиамоделированию памяти экипажа вертолета Бориса Корниенко;</li>
-     <li>"IT-куб" расположился в здании первой в истории города школе. Здание было построено в 1949 году. Ещё при И. Сталине. В этой школе учились дети рабочего поселка с которого начинался г. Южноуральск. Позже в этом учреждении была организована работа УПК (учебно-производственного комбината) в котором школьники осваивали различные профессии.</li>
-</ul>
-
-        
-    </div>
+        </div>
+        <div class="main-img">
+            <img class="my-face" src="img/IMG_20230917_140651.jpg">
+        </div>
+    </div>  
 </body>
 </html>

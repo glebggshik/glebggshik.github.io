@@ -1,0 +1,46 @@
+.work{
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    min-height: 140vh;
+    
+    /* justify-content: space-around;  */
+}
+.obj{
+   max-width: 1200px;
+   max-height: 400px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   flex-wrap: nowrap;
+   padding-bottom: 45px;
+}
+.obj img{
+    max-width: 600px;
+    padding:0 30px;
+    height: 400px;
+}
+h2{
+    color: white;
+    font-size: 36px;
+    max-width: 600px;
+    align-items: center;
+}
+p{
+    color: white;
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.5;
+}
+ul{
+    max-width: 600px;
+    color: white;
+    font-size: 20px;
+    line-height: 1.2;
+    
+}
+.nav{
+    font-size: 16px;
+}

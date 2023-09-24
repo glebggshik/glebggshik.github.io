@@ -153,6 +153,7 @@ header a:hover {
     padding: 0.5em 1em;
     display: flex;
     justify-content: space-between;
+    height: 80px
 }
 .site-identity img {
     width: 80px;
